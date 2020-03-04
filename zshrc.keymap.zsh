@@ -1,6 +1,6 @@
 bindkey -v
 
-bindkey '^i' expand-or-complete-prefix
+bindkey '^i' complete-word
 bindkey "\e[Z" reverse-menu-complete # Shift+Tab
 
 bindkey '' history-incremental-pattern-search-backward
