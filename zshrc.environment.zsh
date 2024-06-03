@@ -1,6 +1,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt appendhistory share_history
 
 if [[ "$LANG" == "" ]]; then
     export LANG="en_US.UTF-8"
@@ -15,7 +16,6 @@ fi
 export VIEWER="$EDITOR"
 
 export KEYTIMEOUT=1
-export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 alias grep="grep --color=auto"
 
@@ -24,3 +24,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
 else
     alias ls="ls --color=auto"
 fi
+
+setopt autocd
+unsetopt nomatch
