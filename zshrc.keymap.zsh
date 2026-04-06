@@ -10,3 +10,7 @@ bindkey "^[[B" history-beginning-search-forward
 
 bindkey -a "(" vi-rev-repeat-find
 bindkey -a ")" vi-repeat-find
+
+bindkey '^K' push-line-or-edit
+bindkey -M viins '^K' push-line-or-edit
+bindkey -M vicmd '^K' push-line-or-edit
