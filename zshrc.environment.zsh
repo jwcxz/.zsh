@@ -9,6 +9,7 @@ fi
 
 if command -v nvim >/dev/null 3>&1; then
     export EDITOR=nvim
+    alias vimdiff="nvim -d"
 else
     export EDITOR=vim
 fi
