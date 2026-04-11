@@ -28,3 +28,6 @@ fi
 
 setopt autocd
 unsetopt nomatch
+
+# bracketed paste is glitchy over SSH
+unset zle_bracketed_paste
