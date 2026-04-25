@@ -1,5 +1,4 @@
-CFG_ZSHPLUGIN_DIR=${CFG_ZSHCFG_DIR}/plugins
-
+CFG_ZSHPLUGIN_DIR=$CFG_ZSHCFG_DIR/plugins
 CFG_ANTIDOTE_DIR=$CFG_ZSHCFG_DIR/.antidote
 
 # install and source antidote
@@ -10,8 +9,8 @@ CFG_ANTIDOTE_DIR=$CFG_ZSHCFG_DIR/.antidote
 bundlefile=$CFG_ZSHCFG_DIR/antidote-plugins.txt
 zstyle ':antidote:bundle' file $bundlefile
 
-if [ ! -d `__antidote_get_cachedir`/antidote ]; then
-    rm "${CFG_ZSHCFG_DIR}/antidote-plugins.zsh"
+if [[ ! -d "$(antidote home)" ]]; then
+    rm -f "$CFG_ZSHCFG_DIR/antidote-plugins.zsh"
 fi
 
 antidote load

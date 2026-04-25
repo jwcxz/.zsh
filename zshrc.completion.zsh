@@ -17,4 +17,7 @@ zstyle :compinstall filename "${HOME}/.zshrc"
 setopt GLOB_COMPLETE
 unsetopt extendedglob
 
+# fzf-tab settings
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+
 autoload -Uz compinit && compinit
